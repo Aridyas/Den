@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="content">
+        <meta name="author" content="yourname">
+        <title>Klaydie's den</title>
+        <link rel="stylesheet" href="Style.css">
+    </head>
+    <body id="personal-web">
+        <header>
+            <nav id="navbar">
+            <h2 class="title">KLAUDIA</h2>                
+            <div class="nav-links">
+                <a href="#profile">HOME</a>
+                <a href="#track-record">TRACK RECORD</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#languages">LANGUAGES</a>
+            </div>
+            </nav>
+        </header>
+        <a id="upButton" href="#profile">▲</a>
+        <a id="downButton" href="#footer">▼</a>
+
+        <!--Profile - profile picture, name, desc, quote-->
+        <section id="profile">
+            <div class="profile-image">
+                <img class="profile-picture" src="./ProfilePicture.png" alt="profile picture">
+            </div>
+            <div class="profile-text">
+                <h2>Hi, I'm Klaydie Luminous</h2>
+                <div class="desc">
+                    <div class="desc-text">
+                        <p>My name is Klaydie. I'm 18 years old and currently interested and developing skills to be a fullstack developer. Outside of coding, i love playing games, cooking, and exercising especially martial arts.</p>
+                        <q>Walking forward is staying still while staying still is walking backward. For the world have no mercy, nor does it have patience.</q>
+                    </div>
+                    <a class="contact-me" href="#footer">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!--Track record-->
+        <section id="track-record">
+            <h2>TRACK RECORDS</h2>
+            <div class="record">
+                <ul>
+                    <li>
+                        <h3>2025 Dumbways.id Best Student</h3>
+                        <p>Number 1 in machine learning, algorithm, learning pace, and achievements</p>
+                    </li>                    
+                    <li>
+                        <h3>2025 Scholarship student at Dumbways.id</h3>
+                        <p>Number 1 in Scholarship test result by using Java</p>
+                    </li>
+                    <li>
+                        <h3>2023 Robotic Club Leader at SMAN 1 KOTA TANGERANG SELATAN</h3>
+                        <p>Favorite leader of the year, proven that i'm capable of teaching and explaining</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--Projects-->
+        <section id="projects">
+            <h2>PROJECTS</h2>
+            <div class="project">
+                <div class="each-project">
+                    <img src="./Projectlogo/docker.png" alt="RapidDocker logo">
+                    <h3><b>RapidDocker</b></h3>
+                    <p>RapidDocker is a high-performance containerization platform built for instant deployment and rapid scaling. It optimizes system resources through parallelized caching and adaptive load distribution. Basically, it makes Docker look like it's still running on dial-up.</p>
+                </div>
+                <div class="each-project">
+                    <img src="./Projectlogo/neural.png" alt="neural network">
+                    <h3><b>Neureal</b></h3>
+                    <p>Neureal is a neural network modeled on the structural and functional patterns of the human brain. It uses dynamic neuron mapping and recursive learning loops to achieve near-human cognitive similarity. Think human reasoning, minus the bad decisions.</p>
+                </div>
+                <div class="each-project">
+                    <img src="./Projectlogo/robo.jpeg" alt="robot picture">
+                    <h3><b>Robonoid</b></h3>
+                    <p>Robonoid is an emotionally aware humanoid robot that learns and mimics human behavior through real-time affective computing. It uses multimodal sensors to detect tone, facial cues, and microexpressions to generate genuine emotional responses. In short, it feels things—almost better than your ex.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Languages-->
+        <section id="languages">
+            <h2>LANGUAGES</h2>
+            <div class="proglangs">
+                <div class="proglang">
+                    <img src="./Proglang/java.png" alt="java logo">
+                </div>
+                <div class="proglang">
+                    <img src="./Proglang/javascript.png" alt="javascript logo">
+                </div>
+                <div class="proglang">
+                    <img src="./Proglang/typescript.png" alt="typescript logo">
+                </div>
+                <div class="proglang">
+                    <img src="./Proglang/sql.jpg" alt="sequel logo">
+                </div>
+                <div class="proglang">
+                    <img src="./Proglang/react.png" alt="react logo">
+                </div>
+                <div class="proglang">
+                    <img src="./Proglang/python.jpg" alt="python logo">
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="footer">
+                <div class="email">
+                    <h2>Get in touch with me!</h2>
+                    <form>
+                        <label>Email: <input type="email" placeholder="Enter your email"></label>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="contacts">
+                    <p class="contact-title"><b>Contact me here</b></p>
+                    <div class="contact-link">
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter / X</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+                <div class="more">
+                    <p class="more-title"><b>More of me</b></p>
+                    <a href="#">My personal blog</a>
+                    <a href="#">My Github account</a>
+                </div>
+            </div>       
+            <p class="copyright">Copyright &copy; 2025 Klaudia All rights reserved.</p>
+        </footer>
+    </body>
+    <script>
+        const upButton = document.getElementById("upButton");
+        const downButton = document.getElementById("downButton");
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            const scrollPosition = scrollY + window.innerHeight;
+            const pageHeight = document.body.offsetHeight;
+
+            if (scrollY > 300) {
+                upButton.style.display = "flex";
+            }else {
+                upButton.style.display = "none";
+            }
+      
+            if (scrollPosition >= pageHeight - 300) {
+                downButton.style.display = "none";
+            }else {
+                downButton.style.display = "flex";
+            }
+        });
+    </script>
+</html>
