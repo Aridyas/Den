@@ -1,0 +1,115 @@
+@import url('./utils.css');
+@import url('./layout.css');
+@import url('./profile.css');
+@import url('./track.css');
+@import url('./projects.css');
+@import url('./languages.css');
+
+:root.dark {
+    --background-color: #181818;
+    --second-color: #2C2C2C;
+    --filler-color: #5F5F5F;
+    --gradient-color: linear-gradient(135deg, #181818, #2C2C2C, #5F5F5F);
+
+    --text-main: #EDEDED;
+    --text-secondary: #B0B0B0;
+}
+
+:root.neon {
+  --background-color: #121212;      /* Deeper dark for contrast */
+  --second-color: #1C1C1C;          /* Layer separation */
+  --filler-color: #0078FF33; /* Soft neon slip */
+  --gradient-color: linear-gradient(135deg, #121212, #1C1C1C, #0078FF33);
+
+  --text-main: #E6F8FF;             /* Slight cyan tint for glow effect */
+  --text-secondary: #9EC8FF;        /* Soft faded neon blue */
+
+  --accent-color: #00FFC8;          /* Controlled neon pop for highlights */
+}
+
+:root.cyan {
+  --background-color: #C9DAD9;      /* Muted teal-gray, cozy base tone */
+  --second-color: #84b1af;          /* Slightly darker for cards/sections */
+  --filler-color: #94B5B3;          /* Mid contrast, perfect for dividers or gradients */
+  --gradient-color: linear-gradient(135deg, #C9DAD9, #B4C8C7, #94B5B3);
+
+  --text-main: #162121;             /* Deep teal-black text */
+  --text-secondary: #2C4040;        /* Softer, but still visible secondary text */
+
+  --accent-color: #4CC7B8;          /* Warm teal highlight */
+}
+
+:root.pink {
+  --background-color: #E8DFE9;      /* Muted lavender-gray base */
+  --second-color: #f1eaea;          /* Slightly darker layer for sections */
+  --filler-color: #C7AECB;          /* Pinkish-lavender blend for gradients */
+  --gradient-color: linear-gradient(135deg, #E8DFE9, #D6C3D8, #C7AECB);
+
+  --text-main: #2A1E30;             /* Rich plum, provides *actual* contrast */
+  --text-secondary: #523E59;        /* Softer purple-gray for secondary text */
+
+  --accent-color: #DB9BE8;          /* Gentle pastel pink for highlights */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text-main);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    color: var(--text-secondary);
+    transform: scale(1.05);
+}
+
+#upButton {
+    position: fixed;
+    top: 90px;
+    right: 30px;
+    background-color: var(--text-secondary);
+    display: none;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: var(--background-color);
+    z-index: 998;
+}
+
+#downButton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--text-secondary);
+    display: none;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: var(--background-color);
+    z-index: 9999;
+}
+
+#personal-web {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}

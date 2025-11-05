@@ -1,0 +1,34 @@
+#track-record {
+    background-color: var(--second-color);
+    box-shadow: 0 0 20px var(--filler-color);
+}
+
+#track-record h2{
+    text-align: center;
+    color: var(--text-main);
+    font-family: 'h2font';
+}
+
+#track-record h3{
+    color: var(--text-main);
+    font-family: 'h2font';
+}
+
+#track-record p{
+    transform: translate(0, -25px);
+    color: var(--text-secondary);
+    font-family: 'pfont';
+}
+
+#track-record li{
+    font-size: larger;
+    transform: scale(1);
+    transition: transform 0.1s ease;
+    font-family: 'pfont';
+    list-style: none;
+}
+
+#track-record li:hover {
+    transform: scale(1.01);
+    cursor: default;
+}

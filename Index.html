@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="en" class="cyan">
+    <head>  
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="content">
         <meta name="author" content="yourname">
         <title>Klaydie's den</title>
-        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="./Style/style.css">
     </head>
     <body id="personal-web">
         <header>
@@ -17,6 +17,15 @@
                 <a href="#track-record">TRACK RECORD</a>
                 <a href="#projects">PROJECTS</a>
                 <a href="#languages">LANGUAGES</a>
+                <div class="dropdown">
+                    <a class="theme-toggle">THEME</a>
+                    <div class="content">
+                        <a id="dark">DARK</a>
+                        <a id="neon">NEON</a>
+                        <a id="pink">PINK</a>
+                        <a id="cyan">CYAN</a>
+                    </div>
+                </div>
             </div>
             </nav>
         </header>
@@ -41,19 +50,19 @@
         </section>
 
         <!--Track record-->
-        <section id="track-record">
+        <section id="track-record" >
             <h2>TRACK RECORDS</h2>
             <div class="record">
                 <ul>
-                    <li>
+                    <li class="appear" >
                         <h3>2025 Dumbways.id Best Student</h3>
                         <p>Number 1 in machine learning, algorithm, learning pace, and achievements</p>
                     </li>                    
-                    <li>
+                    <li class="appear" >
                         <h3>2025 Scholarship student at Dumbways.id</h3>
                         <p>Number 1 in Scholarship test result by using Java</p>
                     </li>
-                    <li>
+                    <li class="appear" >
                         <h3>2023 Robotic Club Leader at SMAN 1 KOTA TANGERANG SELATAN</h3>
                         <p>Favorite leader of the year, proven that i'm capable of teaching and explaining</p>
                     </li>
@@ -86,24 +95,22 @@
         <!--Languages-->
         <section id="languages">
             <h2>LANGUAGES</h2>
-            <div class="proglangs">
-                <div class="proglang">
-                    <img src="./Proglang/java.png" alt="java logo">
+            <div class="carousel">
+                <div class="proglangs">
+                    <img class="proglang" src="./Proglang/java.png" alt="java logo">
+                    <img class="proglang" src="./Proglang/javascript.png" alt="javascript logo">
+                    <img class="proglang" src="./Proglang/typescript.png" alt="typescript logo">
+                    <img class="proglang" src="./Proglang/sql.jpg" alt="sequel logo">
+                    <img class="proglang" src="./Proglang/react.png" alt="react logo">
+                    <img class="proglang" src="./Proglang/python.jpg" alt="python logo">
                 </div>
-                <div class="proglang">
-                    <img src="./Proglang/javascript.png" alt="javascript logo">
-                </div>
-                <div class="proglang">
-                    <img src="./Proglang/typescript.png" alt="typescript logo">
-                </div>
-                <div class="proglang">
-                    <img src="./Proglang/sql.jpg" alt="sequel logo">
-                </div>
-                <div class="proglang">
-                    <img src="./Proglang/react.png" alt="react logo">
-                </div>
-                <div class="proglang">
-                    <img src="./Proglang/python.jpg" alt="python logo">
+                <div class="proglangs">
+                    <img class="proglang" src="./Proglang/java.png" alt="java logo">
+                    <img class="proglang" src="./Proglang/javascript.png" alt="javascript logo">
+                    <img class="proglang" src="./Proglang/typescript.png" alt="typescript logo">
+                    <img class="proglang" src="./Proglang/sql.jpg" alt="sequel logo">
+                    <img class="proglang" src="./Proglang/react.png" alt="react logo">
+                    <img class="proglang" src="./Proglang/python.jpg" alt="python logo">
                 </div>
             </div>
         </section>
@@ -137,6 +144,18 @@
     <script>
         const upButton = document.getElementById("upButton");
         const downButton = document.getElementById("downButton");
+        const root = document.documentElement;
+
+        function setTheme(theme) {
+            root.classList.remove("dark", "neon", "cyan", "pink")
+
+            root.classList.add(theme);
+        }
+
+        document.getElementById("dark").addEventListener("click", () => setTheme("dark"))
+        document.getElementById("cyan").addEventListener("click", () => setTheme("cyan"))
+        document.getElementById("pink").addEventListener("click", () => setTheme("pink"))
+        document.getElementById("neon").addEventListener("click", () => setTheme("neon"))
 
         window.addEventListener("scroll", () => {
             const scrollY = window.scrollY;

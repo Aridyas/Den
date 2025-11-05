@@ -1,0 +1,70 @@
+#profile {
+    background: var(--gradient-color);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    height: 100vh;
+}
+
+.profile-image {
+    margin: 100px;
+}
+
+.profile-image img{
+    height: 680px;
+    width: 400px;
+    object-fit: cover;
+    overflow-y: hidden;
+}
+
+.profile-picture {
+    transform: translate(-30%) scale(1);
+    transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: translate(-30%) scale(1.05);
+}
+
+.profile-text {
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    color: var(--text-secondary);
+    font-size: x-large;
+}
+
+.desc-text {
+    background-color: var(--second-color);
+    padding: 5px 20px 30px 20px;
+    border-radius: 20px;
+}
+
+.contact-me {
+    display: inline-block;
+    background-color: var(--background-color);
+    padding: 15px;
+    border: 2px solid var(--text-secondary);
+    border-radius: 50px;
+    transform: scale(1) translate(0, -10px);
+    transition: transform 0.3s ease;
+}
+
+.contact-me:hover {
+    transform: scale(1.03) translate(0, -10px);
+}
+
+.profile-text h2{
+    color: var(--text-main);
+    font-family: roboto-slab;
+    font-family: 'h2font';
+}
+
+.profile-text q{
+    font-size: smaller;
+    font-family: 'qfont';
+}

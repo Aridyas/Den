@@ -1,0 +1,48 @@
+#projects {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--text-secondary);
+    font-family: 'pfont';
+    background: var(--gradient-color);
+    height: 100vh;
+}
+
+#projects h2{
+    color: var(--text-main);
+    font-family: 'h2font';
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.each-project {
+    margin: 50px;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+    background-color: var(--second-color);
+    padding: 50px 20px 30px 20px;
+    border-radius: 20px;
+    width: 30%;
+    animation: leftAppear 5s linear;
+    animation-timeline: view();
+    animation-range: 0 cover 30%;
+
+}
+
+.each-project h3{
+    color: var(--text-main);
+}
+
+.each-project img {
+    border-radius: 15px;
+}
+
+.each-project:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--text-secondary);
+}

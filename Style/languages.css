@@ -1,0 +1,43 @@
+#languages {
+    display: flex;
+    background-color: var(--background-color);
+    flex-direction: column;
+    text-align: center;
+    color: var(--text-secondary);
+    font-family: 'pfont';
+    
+}
+
+#languages h2{
+    color: var(--text-main);
+    font-family: 'h2font';
+}
+
+.carousel {
+    margin: auto;
+    display: flex;
+}
+
+.proglangs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    animation: flow 10s linear infinite;
+}
+
+.proglang {
+    flex: 0 0 15em;
+    width: 200px;
+    height: 15em;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.proglang:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px var(--text-secondary);
+}
